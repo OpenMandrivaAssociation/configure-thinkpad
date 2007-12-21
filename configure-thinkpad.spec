@@ -10,6 +10,7 @@ URL:		http://tpctl.sourceforge.net/configure-thinkpad.html
 License:	GPL
 Group:		System/Configuration/Hardware
 Source:		http://prdownloads.sourceforge.net/tpctl/%{name}-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	ImageMagick desktop-file-utils
 
