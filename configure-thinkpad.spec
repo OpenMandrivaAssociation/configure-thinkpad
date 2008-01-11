@@ -30,12 +30,6 @@ Currently, mainly power management features are supported.
 rm -Rf %{buildroot}
 %makeinstall_std
 
-mkdir -p %{buildroot}/%{_menudir}
-cat << EOF > %{buildroot}/%{_menudir}/%{name}
-?package(%{name}):command="%{name}" icon="%{name}.png" \
-needs="x11" section="Configuration/Hardware" title="Thinkpad Settings" \
-longtitle="Thinkpad settings" xdg="true"
-EOF
 
 desktop-file-install --vendor="" \
   --remove-category="Application" \
@@ -93,7 +87,6 @@ fi
 %defattr(-,root,root)
 %{_bindir}/%{name}
 %{_datadir}/pixmaps/%{name}
-%{_menudir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
