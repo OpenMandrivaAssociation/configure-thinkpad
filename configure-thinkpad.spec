@@ -46,7 +46,9 @@ convert -resize 16x16 pixmaps/gnome-laptop.png %{buildroot}/%{_miconsdir}/%{name
 rm -rf %{buildroot}
 
 %post
+%if %mdkversion < 200900
 %update_menus
+%endif
 
 modulesconf=/etc/modules.conf
 if ! `grep -q "/dev/thinkpad" $modulesconf` ; then
@@ -80,8 +82,10 @@ fi
 # We don't remove the additions to modules.conf and console.perms since
 # some other package (ie tpctl) may want them ...
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %files
 %defattr(-,root,root)
