@@ -77,11 +77,11 @@ if ! `grep -q "/dev/thinkpad" $consoleperms` ; then
 EOF
 fi
 
-%postun
-%clean_menus
-
 # We don't remove the additions to modules.conf and console.perms since
 # some other package (ie tpctl) may want them ...
+
+%postun
+%clean_menus
 
 %files
 %defattr(-,root,root)
