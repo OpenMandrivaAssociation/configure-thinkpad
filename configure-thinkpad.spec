@@ -1,6 +1,6 @@
 %define name	configure-thinkpad
 %define ver 	0.9
-%define rel	%mkrel 3
+%define rel	%mkrel 4
 
 Name:		%{name}
 Version:	%{ver}
@@ -10,6 +10,7 @@ URL:		http://tpctl.sourceforge.net/configure-thinkpad.html
 License:	GPL
 Group:		System/Configuration/Hardware
 Source:		http://prdownloads.sourceforge.net/tpctl/%{name}-%{version}.tar.bz2
+Patch0:		configure-thinkpad-fix-desktop-entry.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	ImageMagick desktop-file-utils
@@ -21,6 +22,7 @@ Currently, mainly power management features are supported.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %configure
