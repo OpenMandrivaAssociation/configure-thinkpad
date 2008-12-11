@@ -13,7 +13,7 @@ Source:		http://prdownloads.sourceforge.net/tpctl/%{name}-%{version}.tar.bz2
 Patch0:		configure-thinkpad-fix-desktop-entry.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	libgnomeui2-devel
-BuildRequires:	ImageMagick desktop-file-utils
+BuildRequires:	imagemagick desktop-file-utils
 
 %description
 Utility to configure IBM Thinkpad behaviour.
