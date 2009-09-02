@@ -1,6 +1,6 @@
 %define name	configure-thinkpad
 %define ver 	0.9
-%define rel	%mkrel 4
+%define rel	%mkrel 5
 
 Name:		%{name}
 Version:	%{ver}
