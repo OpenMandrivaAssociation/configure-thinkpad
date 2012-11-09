@@ -1,0 +1,11 @@
+diff -p -up ./configure-thinkpad.desktop.tv ./configure-thinkpad.desktop
+--- ./configure-thinkpad.desktop.tv	2008-06-17 10:44:13.000000000 +0200
++++ ./configure-thinkpad.desktop	2008-06-17 10:44:19.000000000 +0200
+@@ -2,6 +2,6 @@
+ Name=Configure ThinkPad
+ Comment=IBM ThinkPad Configuration Tool
+ Exec=configure-thinkpad
+-Icon=configure-thinkpad/gnome-laptop.png
++Icon=gnome-laptop.png
+ Type=Application
+ Categories=Application;System;
