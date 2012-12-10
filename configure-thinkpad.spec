@@ -99,3 +99,52 @@ fi
 %{_datadir}/applications/%{name}.desktop
 
 %doc AUTHORS
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 0.9-6mdv2011.0
++ Revision: 617411
+- the mass rebuild of 2010.0 packages
+
+* Wed Sep 02 2009 Thierry Vignaud <tv@mandriva.org> 0.9-5mdv2010.0
++ Revision: 424940
+- rebuild
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Tue Jun 17 2008 Thierry Vignaud <tv@mandriva.org> 0.9-4mdv2009.0
++ Revision: 222018
+- patch 0: fix 'error: value "configure-thinkpad/gnome-laptop.png" for key
+  "Icon" in group "Desktop Entry" looks like a relative path, instead of being
+  an absolute path to an icon or an icon name'
+- drop old menu
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+    - cleanup %%postun
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Gustavo De Nardin <gustavodn@mandriva.com>
+    - Import configure-thinkpad
+
+
+
+* Tue Sep 12 2006 Emmanuel Andry <eandry@mandriva.org> 0.9-3mdv2007.0
+- add buildrequires desktop-file-utils
+
+* Tue Sep 12 2006 Emmanuel Andry <eandry@mandriva.org> 0.9-2mdv2007.0
+- %%mkrel
+- xdg menu
+
+* Mon Mar 21 2005 Lenny Cartier <lenny@mandrakesoft.com> 0.9-1mdk
+- from Emmanuel Andry <eandry@free.fr> : 
+	- 0.9
+* Tue Aug 24 2004 Erwan Velu <erwan@mandrakesoft.com> 0.3-1mdk
+- 0.3
+* Tue Dec 23 2003 Buchan Milne <bgmilne@linux-mandrake.com> 0.1-1mdk
+- First Mandrake package
+- We need a better solution for the thinkpad device files ...
