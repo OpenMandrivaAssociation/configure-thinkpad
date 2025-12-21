@@ -12,6 +12,11 @@ Group:		System/Configuration/Hardware
 Source:		http://prdownloads.sourceforge.net/tpctl/%{name}-%{version}.tar.bz2
 Patch0:		configure-thinkpad-fix-desktop-entry.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	imagemagick desktop-file-utils
 
